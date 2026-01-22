@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Multi Task Manager</title>
+  
+
+</head>
+<body>
+
+  <nav>
+    <% if (user) { %>
+      <span>Logged in as: <%= user.email %></span> |
+      <a href="/projects">Projects</a> |
+      <a href="/auth/logout">Logout</a>
+    <% } else { %>
+      <a href="/auth/login">Login</a> |
+      <a href="/auth/register">Register</a>
+    <% } %>
+  </nav>
+
+  <hr />
+
+  <%- body %>
+
+</body>
+</html>
